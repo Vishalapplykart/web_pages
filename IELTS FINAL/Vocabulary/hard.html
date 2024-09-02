@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Vocabulary Memorization</h1>
+        <nav>
+            <ul>
+                <li><button onclick="showLevel('easy')">Easy</button></li>
+                <li><button onclick="showLevel('medium')">Medium</button></li>
+                <li><button onclick="showLevel('hard')">Hard</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="flashcards">
+        <div class="card" onclick="flipCard(this)">
+            <div class="front">
+                <p id="word">Word <span class="icon">🌟</span></p>
+                <button id="pronounce-btn" onclick="playPronunciation(event)">🔊 Pronounce</button>
+                <!-- <button class="flip-icon" id="pronounce-btn" onclick="flipCard(event)">Flip Me</button> -->
+                <button class="flip-icon" id="flip-card-btn" onclick="flipCard(event)" aria-label="Flip the card">Flip Me</button>
+
+                <!-- <span class="flip-icon">Flip Me</span> Flip card icon added -->
+            </div>
+            <div class="back">
+                <p id="definition">Definition</p>
+                <p><strong>Example:</strong> <span id="example">Example sentence goes here. 💬</span></p>
+                <p><strong>Advantages:</strong> <span id="advantages">Advantages of the word 👍</span></p>
+                <p><strong>Disadvantages:</strong> <span id="disadvantages">Disadvantages of the word 👎</span></p>
+            </div>
+        </div>
+        <!-- <div class="card" onclick="flipCard(this)">
+            <div class="front">
+                <p id="word">Word </p>
+                <button id="pronounce-btn" onclick="playPronunciation(event)">🔊 Pronounce</button>
+            </div>
+            <div class="back">
+                <p id="definition">Definition <span class="icon">📚</span></p>
+                <p><strong>Example:</strong> <span id="example">Example sentence <span class="icon">💬</span></span></p>
+                <p><strong>Advantages:</strong> <span id="advantages">Advantages of the word <span class="icon">👍</span></span></p>
+                <p><strong>Disadvantages:</strong> <span id="disadvantages">Disadvantages of the word <span class="icon">👎</span></span></p>
+            </div>
+        </div> -->
+        
+        <!-- <button id="nextWord" onclick="nextWord()">Next Word</button> -->
+        <button id="nextWord" onclick="nextWord()" aria-label="Next Vocabulary Word">Next Word</button>
+
+    </section>
+
+    <section id="feedback">
+        <button id="knewWord" onclick="handleFeedback(true)">I Knew This Word</button>
+        <button id="didntKnowWord" onclick="handleFeedback(false)">I Didn't Know This Word</button>
+    </section>
+
+    <!-- Message Box -->
+<div id="messageBox">
+    <p></p>
+</div>
+
+ <!-- Page Up and Page Down buttons -->
+ <button id="pageUp" onclick="pageUp()">⬆️</button>
+ <button id="pageDown" onclick="pageDown()">⬇️</button>
+
+    <!-- eBooks Section -->
+<section id="ebooks">
+    <h2>Explore Our eBooks</h2>
+    <ul>
+        <li>
+            <i class="fas fa-book"></i>
+            <a href="#">Beginner's Guide</a>
+        </li>
+        <li>
+            <i class="fas fa-book-reader"></i>
+            <a href="#">Intermediate Mastery</a>
+        </li>
+        <li>
+            <i class="fas fa-laptop-code"></i>
+            <a href="#">Advanced Techniques</a>
+        </li>
+        <li>
+            <i class="fas fa-graduation-cap"></i>
+            <a href="#">Expert's Path</a>
+        </li>
+    </ul>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

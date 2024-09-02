@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(mesh-1430108_1280.png);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container p{
+    color: rgb(84, 74, 132);
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+
+/* .show-answer{
+    font-size: 30px;
+    background-color: pink;
+} */
+
+.instructions {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.audio-control {
+    margin-bottom: 20px;
+}
+
+.audio-control button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.audio-control img {
+    width: 50px;
+    height: 50px;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 32%;
+    height: 300px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+

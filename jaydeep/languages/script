@@ -1,0 +1,5 @@
+document.getElementById('setLanguageBtn').addEventListener('click', function() {
+    const selectedLanguage = document.getElementById('languageSelect').value;
+    alert('You have selected: ' + selectedLanguage);
+    // You can add further functionality here, like saving the selected language preference
+});
